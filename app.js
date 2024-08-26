@@ -2281,7 +2281,7 @@ function getRandomCard() {
   const item = data[randomIndex];
   randomCard.innerHTML = `
         <a rel="noopener noreferrer"
-            class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
+            class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50 shadow-md ">
             <img src="${item.flag}" alt=""
                 class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
             <div class="p-6 space-y-2 lg:col-span-5">
@@ -2317,7 +2317,7 @@ function getFullCards(regionArg) {
   arr.map((item) => {
     if (item.region.includes(regionArg)) {
       cards.innerHTML += `
-            <article onclick="showCountry('${item.id}')" data-aos="fade-up" class="flex flex-col dark:bg-gray-50">
+            <article onclick="showCountry('${item.id}')" data-aos="fade-up" class="flex flex-col dark:bg-gray-50 shadow-md ">
                  <a rel="noopener noreferrer" aria-label="Te nulla oportere reprimique his dolorum">
                      <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
                          src="${item.flag}">
@@ -2336,7 +2336,6 @@ function getFullCards(regionArg) {
              </article>`;
     }
   });
-  // closeNav()
 }
 
 getFullCards("");
@@ -2402,7 +2401,7 @@ function searchFunk() {
         item.name.toLocaleLowerCase().startsWith(inpVal.toLocaleLowerCase())
       ) {
         cards.innerHTML += `
-                <article data-aos="fade-up" class="flex flex-col dark:bg-gray-50">
+                <article data-aos="fade-up" class="flex flex-col dark:bg-gray-50 shadow-md ">
                      <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
                          <img alt="" class="object-cover w-full h-52 dark:bg-gray-500"
                              src="${item.flag}">
